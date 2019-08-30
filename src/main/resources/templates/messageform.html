@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br /><br />
+<h1>Bullhorn Message file upload</h1>
+<form method="POST" action="/add" th:object="${message}"
+      enctype="multipart/form-data">
+    Content: <input type="text" th:field="*{content}" />
+    Posted Date: <input type="text" th:field="*{posteddate}" />
+    Sent By: <input type="text" th:field="*{sentby}" />
+    <input type="file" name="file" /><br/><br/>
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
